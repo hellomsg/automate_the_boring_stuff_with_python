@@ -1,9 +1,10 @@
-#! python3
+#!python3
+# -*- coding: utf-8 -*-
 
-import openpyxl, pprint
+import openpyxl, pprint, base_path
 
 print('Opening workbook...')
-wb = openpyxl.load_workbook('../automate_online-materials/censuspopdata.xlsx')
+wb = openpyxl.load_workbook(base_path.files + '/censuspopdata.xlsx')
 sheet = wb.get_sheet_by_name('Population by Census Tract')
 countyData	= {}
 
